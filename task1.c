@@ -4,12 +4,17 @@
 int main() {
     int funcValues [N] ={0};
     int numOfValues = 0;
+    int status = 0;
     printf("Write argue of the func where func is true\n");
     printf("Write -1 if you wanna stop \n");
     for (int i = 0; i < N; i++) {
         printf("Your value: ");
         int funcvalue = 0;
-        scanf("%d", &funcvalue);
+        status = scanf("%d", &funcvalue);
+        if (!status || funcvalue > 15 || funcvalue < 0) {
+            printf("It is not correct option\n Pls try again\n");
+            --i;
+        }
         if(funcvalue == -1 || i == 16) break;
         funcValues[i] = funcvalue;
         ++numOfValues;
