@@ -86,7 +86,7 @@ int main() {
         printf("| %2d  |", i);
 
         for (int k = 0; k < 4; k++) {
-            printf("|  %d  ", funcBit[i][k]);
+            printf("|  %d  |", funcBit[i][k]);
         }
 
         printf("|  %d  |\n", isTrue);
